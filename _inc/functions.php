@@ -79,6 +79,14 @@ function generate_gallery(int $n_rows, int $n_cols){
         echo('</div>');
     }
 }
+function generate_questions(array $questions){
+    foreach($questions as $question => $answer){
+        echo('<div class="accordion">');
+        echo('<div class="question">'.$question.'</div>');
+        echo('<div class="answer">'.$answer.'</div>');
+        echo('</div>');
+    }
+}
 function redirect_homepage(){
     header("Location: templates/home.php");
     die("Unable to find Home page");
