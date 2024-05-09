@@ -21,7 +21,7 @@
            $pages = array('Home'=>'index.php',
            'Gallery'=>'gallery.php',
            'Questions'=>'questions.php',
-           'Kontakt'=>'kontakt.php'  
+           'Kontakt'=>'contacts.php'  
            );
 
            foreach($pages as $page_name => $page_url){
