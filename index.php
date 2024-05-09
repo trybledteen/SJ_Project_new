@@ -17,10 +17,17 @@
         </div>
       <nav class="main-nav">
         <ul class="main-menu" id="main-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="questions.html">Questions</a></li>
-            <li><a href="contacts.html">Contacts</a></li>
+          <?php
+           $pages = array('Home'=>'index.php',
+           'Gallery'=>'gallery.php',
+           'Questions'=>'questions.php',
+           'Kontakt'=>'kontakt.php'  
+           );
+
+           foreach($pages as $page_name => $page_url){
+            echo('<li><a href = "'.$page_url.'">'.$page_name.'</a></li>');
+          }
+          ?>  
         </ul>
         <a class="hamburger" id="hamburger">
             <i class="fa fa-bars"></i>
