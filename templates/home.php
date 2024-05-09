@@ -2,30 +2,11 @@
 include_once('partials/header.php');
 ?>    
     <main>
-            <?php
-          $headings = array('I love peaks as individuals, as equal parts of a larger whole.','Im not going to conquer the mountains - they are as much a part of the world as people. Im conquering myself.');
-          $img_folder = 'img/carousel/';
-          $img_files = glob($img_folder . '*.jpg');
-
-          for($i = 0; $i < count($img_files); $i++){
-            echo('<div class="slide fade">');
-            echo('<img src="'.$img_files[$i].'">');
-            echo('<div class="slide-text">');
-            if(count($headings) == count($img_files)){
-              echo($headings[$i]);
-            }else{
-                if($i<count($headings)){
-                  echo($headings[$i]);
-                }
-            }
-            echo('</div>');
-            echo('</div>');
-          }    
+        <?php
+          $headings = array("I love peaks as individuals, as equal parts of a larger whole.", "I'm not going to conquer the mountains - they are as much a part of the world as people. Im conquering myself.");
+          $img_folder = '../assets/img/carousel/';
+          generate_slides($headings, $img_folder);
         ?>
-            
-            <a id="prev" class="prev">❮</a>
-            <a id="next" class="next">❯</a>
-        </section>
         
         <section class="container cont">
             <div class="row_text">

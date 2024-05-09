@@ -32,6 +32,35 @@ function add_scripts(){
     }
 
 }
+function generate_slides(array $headings, string $img_folder) {
+    echo('<section class="slides-container">');
+    $img_files = glob($img_folder . '*.jpg');
+    
+    $heading_count = count($headings);
+    
+    for ($i = 0; $i < count($img_files); $i++) {
+        echo('<div class="slide fade">');
+        
+        echo('<img src="'.$img_files[$i].'">');
+        
+        echo('<div class="slide-text">');
+        
+        if ($heading_count == count($img_files)) {
+            echo($headings[$i]);
+        } else {
+            if ($i < $heading_count) {
+                echo($headings[$i]);
+            }
+        }
+        
+        echo('</div>');
+        
+        echo('</div>');
+    }
+    echo('<a id="prev" class="prev">❮</a>
+    <a id="next" class="next">❯</a>
+    </section>');
+}
 function redirect_homepage(){
     header("Location: templates/home.php");
     die("Unable to find Home page");

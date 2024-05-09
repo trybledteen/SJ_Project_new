@@ -3,24 +3,11 @@ include_once('partials/header.php');
 ?>    
 
     <main>
-        <section class="slides-container">
-            <div class="slide fade">
-              <img src="img/banner1.jpg">
-              <div class="slide-text">
-                I love peaks as individuals, as equal parts of a larger whole.
-              </div>
-            </div>
-            
-            <div class="slide fade">
-              <img src="img/banner3.jpg">
-              <div class="slide-text">
-                I'm not going to conquer the mountains - they are as much a part of the world as people. I'm conquering myself.
-              </div>
-            </div>
-            
-            <a id="prev" class="prev">❮</a>
-            <a id="next" class="next">❯</a>
-        </section>
+    <?php
+          $headings = array("I love peaks as individuals, as equal parts of a larger whole.", "I'm not going to conquer the mountains - they are as much a part of the world as people. Im conquering myself.");
+          $img_folder = '../assets/img/carousel/';
+          generate_slides($headings, $img_folder);
+        ?>
         
         <section class="container cont">
             <div class="row_text">
