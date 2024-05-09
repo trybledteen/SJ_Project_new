@@ -28,29 +28,21 @@ include_once('partials/header.php');
               </div>
             </div>
         </section>
-        <section>
-            <div class="photo">
-                <h1 class="gallery">Gallery</h1>
-                <div class="img">
-                    <img src="img/gallery/gal1.jpg">
-                </div>
-                <div class="img">
-                    <img src="img/gallery/gal2.jpg">
-                </div>
-                <div class="img">
-                    <img src="img/gallery/gal3.jpg">
-                </div>
-                <div class="img">
-                    <img src="img/gallery/gal4.jpg">
-                </div>
-                <div class="img">
-                    <img src="img/gallery/gal5.jpg">
-                </div>
-                <div class="img">
-                    <img src="img/gallery/gal6.jpg">
-                </div>
-            </div>
-            </section>
+        <?php
+                    $n_rows = 2;
+                    $n_cols = 4;
+                    $n_gallery = 1;
+                    for($i = 0; $i<$n_rows;$i++){
+                        echo('<div class="row">');
+                        for($j = 0; $j<$n_cols;$j++){
+                           echo('<div class="col-50 gallery text-white text-center" id="gallery-'.$n_gallery.'">');
+                           echo('Mountains company'.$n_gallery);
+                           $n_gallery++;
+                           echo('</div>');
+                        }
+                        echo('</div>');
+                    }
+                ?>
     </main>
     <?php
     include_once('partials/footer.php')

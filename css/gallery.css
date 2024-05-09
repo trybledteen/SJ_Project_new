@@ -1,0 +1,33 @@
+.gallery{
+    height:350px;
+    background-size:cover;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.5);
+    background-blend-mode: darken;
+  }
+  .gallery:hover{
+    background-color: rgba(255,255,255,0.5);
+    background-blend-mode: lighten;
+  }
+  #gallery-1{
+    background-image: url('../img/gallery/gal1.jpg');
+  }
+  #gallery-2{
+    background-image: url('../img/gallery/gal2.jpg');
+  }
+  #gallery-3{
+    background-image: url('../img/gallery/gal3.jpg');
+  }
+  #gallery-4{
+    background-image: url('../img/gallery/gal4.jpg');
+  }
+  #gallery-5{
+    background-image: url('../img/gallery/gal5.jpg');
+  }
+  #gallery-6{
+    background-image: url('../img/gallery/gal6.jpg');
+  }
+ 
