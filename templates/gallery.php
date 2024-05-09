@@ -16,20 +16,25 @@ include_once('partials/header.php');
             </div>
         </section>
         <?php
-                    $n_rows = 2;
-                    $n_cols = 4;
-                    $n_gallery = 1;
-                    for($i = 0; $i<$n_rows;$i++){
-                        echo('<div class="row">');
-                        for($j = 0; $j<$n_cols;$j++){
-                           echo('<div class="col-50 gallery text-white text-center" id="gallery-'.$n_gallery.'">');
-                           echo('Mountains company'.$n_gallery);
-                           $n_gallery++;
-                           echo('</div>');
-                        }
-                        echo('</div>');
-                    }
-                ?>
+        
+        $gallery_object = new Gallery();
+        $gallery = $gallery_object->select();
+        
+        for ($i = 0; $i < count($gallery); $i++) {
+            $temp_i = $i + 1;
+            if ($temp_i % 4 == 1) {
+                echo '<div class="row">';
+            }
+
+            echo '<div class="col-50 gallery text-white text-center" style="background-image: url(\''.$gallery[$i]->image.'\');">';
+            echo '<a href="">'.$gallery[$i]->name.'</a>';
+            echo '</div>';
+
+            if ($temp_i % 4 == 0 || $temp_i == count($gallery)) {
+                echo '</div>'; 
+            }
+        }
+        ?>
     </main>
     <?php
     include_once('partials/footer.php')

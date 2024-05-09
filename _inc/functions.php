@@ -61,6 +61,24 @@ function generate_slides(array $headings, string $img_folder) {
     <a id="next" class="next">❯</a>
     </section>');
 }
+function generate_gallery(int $n_rows, int $n_cols){
+    $n_gallery = 1; 
+    $col_class = 100/$n_cols;
+
+    for($i = 0; $i < $n_rows; $i++){
+        echo('<div class="row">'); 
+
+        for($j = 0; $j < $n_cols; $j++){
+
+            echo('<div class="col-'.$col_class.' photo gallery text-white text-center" id="gallery-'.$n_gallery.'">');
+            echo('Web stránka '.$n_gallery); 
+            $n_gallery++; 
+            echo('</div>');
+        }
+
+        echo('</div>');
+    }
+}
 function redirect_homepage(){
     header("Location: templates/home.php");
     die("Unable to find Home page");
