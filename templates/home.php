@@ -33,13 +33,13 @@ include_once('partials/header.php');
           <section>
             <div class="photo">
                 <div class="img">
-                    <img src="img/people.jpg">
+                    <img src="../assets/img/people.jpg">
                 </div>
                 <div class="img">
-                    <img src="img/people2.jpg">
+                    <img src="../assets/img/people2.jpg">
                 </div>
                 <div class="img">
-                    <img src="img/people3.jpg">
+                    <img src="../assets/img/people3.jpg">
                 </div>
                 <section class="container cont">
                     <p class="company">MOUNTAIN COMPANY</p>
@@ -59,7 +59,7 @@ include_once('partials/header.php');
         <section class="container">
             <div class="row">
               <div><br><br>
-                <i><img src="img/fact-1.png">
+                <i><img src="../assets/img/fact-1.png">
               </div>
                 </i>  
                 <div class="col-50"><br><br>
@@ -71,7 +71,7 @@ include_once('partials/header.php');
             <section class="aa">
                 <div class="row">
                 <div>
-                    <i><img src="img/fact-2.png">
+                    <i><img src="../assets/img/fact-2.png">
                 </div>
                     </i>  
                 <div class="col-50"><br>
@@ -83,7 +83,7 @@ include_once('partials/header.php');
             <section class="aa">
                 <div class="row">
                 <div><br><br>
-                    <i><img src="img/fact-3.png" class="bb">
+                    <i><img src="../assets/img/fact-3.png" class="bb">
                 </div>
                     </i>  
                     <div class="col-50"><br><br>
