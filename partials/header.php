@@ -1,36 +1,43 @@
+<?php
+    require_once('../_inc/functions.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/slider.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Mountain Company</title>
+    <title><?php 'Mountain Company | '. (basename($_SERVER["SCRIPT_NAME"], '.php'));?></title>
+    <?php
+       $page_name = basename($_SERVER["SCRIPT_NAME"],'.php');
+       $page_object = new Page($page_name);
+       $page_object->add_stylesheet();
+  ?>
+    
 </head>
 <body>
     <header class="container main-header">
         <div>
-            <a href="index.html">
-                <img src="img/logo.jpg" height="40">
+            <a href="home.php">
+                <img src="../assets/img/logo.jpg" height="40">
             </a>
         </div>
-      <nav class="main-nav">
-        <ul class="main-menu" id="main-menu">
-          <?php
-           $pages = array('Home'=>'index.php',
-           'Gallery'=>'gallery.php',
-           'Questions'=>'questions.php',
-           'Kontakt'=>'contacts.php'  
-           );
-
-           foreach($pages as $page_name => $page_url){
-            echo('<li><a href = "'.$page_url.'">'.$page_name.'</a></li>');
-          }
-          ?>  
-        </ul>
-        <a class="hamburger" id="hamburger">
-            <i class="fa fa-bars"></i>
-        </a>
-      </nav>
+        <nav class="main-nav">
+            <ul class="main-menu" id="main-menu">
+            <?php
+                $pages = array('Home'=>'home.php',
+                'Gallery'=>'gallery.php',
+                'Questions'=>'questions.php',
+                'Contacts'=>'contacts.php'  
+                );
+                if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){
+                     $pages['Log out'] = 'logout.php';
+                }
+                $menu_object = new Menu($pages);
+                echo($menu_object->generate_menu());
+            ?>
+            </ul>
+            <a class="hamburger" id="hamburger">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
     </header>
