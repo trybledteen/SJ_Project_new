@@ -1,20 +1,21 @@
-<?php
-include_once('partials/header.php');
-?>    
+<?php 
+include_once('partials/header.php'); 
+?>
 
     <main>
     <?php
-          $headings = array("I love peaks as individuals, as equal parts of a larger whole.", "I'm not going to conquer the mountains - they are as much a part of the world as people. Im conquering myself.");
-          $img_folder = '../assets/img/carousel/';
-          generate_slides($headings, $img_folder);
-        ?>
+    $headings = array("I love peaks as individuals, as equal parts of a larger whole.", "I'm not going to conquer the mountains - they are as much a part of the world as people. Im conquering myself.");
+    $img_folder = '../assets/img/carousel/';
+    generate_slides($headings, $img_folder);
+    ?>
+
         
-        <section class="container cont">
-            <div class="row_text">
-              <div class="col-100 text-center">
-                  <p class="bottom_text"><strong><em>"Only wise mountains can tolerate human selfishness for centuries... But even their patience has a limit."</em></strong></p>
-              </div>
+     <section class="container cont">
+        <div class="row_text">
+            <div class="col-100 text-center">
+                <p class="bottom_text"><strong><em>"Only wise mountains can tolerate human selfishness for centuries... But even their patience has a limit."</em></strong></p>
             </div>
+        </div>
         </section>
 
         <section class="container">
@@ -30,26 +31,20 @@ include_once('partials/header.php');
               </div>
                 <!--formular sem-->
                 <div class="col-10"></div>
-                <form id="contact" action="thankyou.html">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-
-                    <label for="experience">Mountain Hiking Experience:</label>
-                    <input type="text" id="experience" name="experience">
-
-                    <label for="preferences">Mountain Preferences:</label>
-                    <input type="text" id="preferences" name="preferences">
-    
-
-                    <button type="submit">Submit</button>
+                <form id="contact" action="thankyou.php" method="POST">
+                  <input type="text" placeholder="Vaše meno" name="name" required><br>
+                  <input type="email" placeholder="Váš email" name="email" required><br>
+                  <textarea placeholder="Vaša správa" name="message"></textarea><br>
+                  <input type="checkbox" name="acceptance" value="1" required>
+                  <label> Súhlasím so spracovaním osobných údajov.</label><br>
+                  <input type="submit" name="contact_submitted"value="Odoslať" >
                 </form>
                 </div>
             </div>
         </section>
     </main>
-    <?php
-    include_once('partials/footer.php')
-  ?> 
+    
+    <?php 
+    include_once('partials/footer.php'); 
+    ?>
+

@@ -4,5 +4,6 @@ require_once('classes/Menu.php');
 require_once('classes/Database.php');
 require_once('classes/Gallery.php');
 require_once('classes/Questions.php');
+require_once('classes/Contact.php');
 session_start();
 ?>

@@ -21,7 +21,13 @@ include_once('partials/header.php');
             <p class="thank">Your answers will help us understand you better and create an unforgettable route in the world of mountain adventures.</p>
             <p class="thank">If you have any additional questions or concerns, don't hesitate to let us know. We are ready to make your future adventure as comfortable and unique as possible!</p>
             <p class="thank">Thank you for choosing our company, and we are waiting for you in the mountains!</p>
-        </section>    
+        </section>  
+        <?php
+                  //print_r($_POST);
+                  //$conn = db_connection();
+                  $contact_object = new Contact();
+                  $contact_object->insert();
+               ?>  
     </main>
     <?php
     include_once('partials/footer.php')
