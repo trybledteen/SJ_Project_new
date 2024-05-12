@@ -11,9 +11,7 @@
         public function insert(){
 
             if($this->db){
-                //echo 'Máme spojenie s databázou';
                 if(isset($_POST['contact_submitted'])){
-                    //echo 'Post bol vykonaný';
                     $data = array('contact_name'=>$_POST['name'],
                       'contact_email'=>$_POST['email'],
                       'contact_message'=>$_POST['message'],
@@ -32,11 +30,9 @@
                         echo $e->getMessage();
                     }
                 }else{
-                    //echo 'Post nebol vykonaný';
                 }
               }
               else{
-                //echo 'Nemáme spojenie s databázou';
               }
         }
         public function select(){
@@ -78,10 +74,9 @@
 
         public function edit($contact_id, $new_data){
           try{
-            // Zostavenie dát pre aktualizáciu
             $data = array(
                 'contact_id' => $contact_id,
-                'contact_name' => $new_data['name'], // Predpokladáme, že máme pole $new_data s novými údajmi
+                'contact_name' => $new_data['name'], 
                 'contact_email' => $new_data['email'],
                 'contact_message' => $new_data['message']
             );
@@ -92,7 +87,6 @@
              
     
         }catch(PDOException $e){
-            // Spracovanie chyby, ak nastane
             echo $e->getMessage();
         }
         }

@@ -30,6 +30,11 @@ input {
     box-sizing: border-box;
     border-radius: 8px;
 }
+textarea {
+    width: 258px;
+    height: 85px;
+    
+  }
 
 button {
     background-color:  #c4c4c4fd;

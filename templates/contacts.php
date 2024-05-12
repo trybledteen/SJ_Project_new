@@ -32,12 +32,12 @@ include_once('partials/header.php');
                 <!--formular sem-->
                 <div class="col-10"></div>
                 <form id="contact" action="thankyou.php" method="POST">
-                  <input type="text" placeholder="Vaše meno" name="name" required><br>
-                  <input type="email" placeholder="Váš email" name="email" required><br>
-                  <textarea placeholder="Vaša správa" name="message"></textarea><br>
+                  <input type="text" placeholder="Your name" name="name" required><br>
+                  <input type="email" placeholder="Your email" name="email" required><br>
+                  <textarea placeholder="Your message" name="message"></textarea><br>
                   <input type="checkbox" name="acceptance" value="1" required>
-                  <label> Súhlasím so spracovaním osobných údajov.</label><br>
-                  <input type="submit" name="contact_submitted"value="Odoslať" >
+                  <label> I consent to the processing of my personal data.</label><br>
+                  <input type="submit" name="contact_submitted"value="Send to" >
                 </form>
                 </div>
             </div>
