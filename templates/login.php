@@ -26,7 +26,7 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){
                         $user_object = new User();
 
                         $login_success = $user_object->login($email,$password);
-                        
+                         //ak metóda vráti TRUE
                         if($login_success == true){
                             header('Location: admin.php');
                             die;

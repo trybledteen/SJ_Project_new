@@ -23,9 +23,11 @@ include_once('partials/header.php');
             <p class="thank">Thank you for choosing our company, and we are waiting for you in the mountains!</p>
         </section>  
         <?php
-                  $contact_object = new Contact();
-                  $contact_object->insert();
-               ?>  
+        //print_r($_POST);
+        //$conn = db_connection();
+        $contact_object = new Contact();
+        $contact_object->insert();
+        ?>  
     </main>
     <?php
     include_once('partials/footer.php')

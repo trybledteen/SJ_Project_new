@@ -25,7 +25,7 @@
                     $db_query = "SELECT * FROM gallery WHERE id = ?";
                     $query = $this->db->prepare($db_query);
                     $query->execute([$id]);
-                    $gallery = $query->fetch();
+                    $gallery = $query->fetch(); // Použitie funkcie fetch(), pretože očakávame len jeden riadok
                     if($gallery) {
                         return $gallery;
                     }else{
@@ -38,6 +38,7 @@
                 } 
 
             } else {
+                // id neexistuje alebo nie je validne
                 header("HTTP/1.0 400 Bad Request");
                 header("Location: 404.php");
                 die();

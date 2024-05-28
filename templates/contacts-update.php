@@ -6,11 +6,12 @@ $contact_object = new Contact();
 if(isset($_POST['edit_contact'])) {
   $edit_contact_id = $_POST['edit_contact'];
   $contact_data = $contact_object->select_single($edit_contact_id);
+  //print_r($contact_data);
 
 }
 
 if($contact_data) {
-
+// Vyplnenie údajov do formulára
   $name = $contact_data->name;
   $email = $contact_data->email;
   $message = $contact_data->message;

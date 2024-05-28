@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php 'Mountain Company | '. (basename($_SERVER["SCRIPT_NAME"], '.php'));?></title>
     <?php
+        //add_stylesheet();
        $page_name = basename($_SERVER["SCRIPT_NAME"],'.php');
        $page_object = new Page($page_name);
        $page_object->add_stylesheet();
@@ -29,6 +30,9 @@
                 'Questions'=>'questions.php',
                 'Contacts'=>'contacts.php'  
                 );
+                //echo(generate_menu($pages));
+                //$menu_object = new Menu($pages);
+                //echo($menu_object->generate_menu());
                 if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true){
                      $pages['Log out'] = 'logout.php';
                 }

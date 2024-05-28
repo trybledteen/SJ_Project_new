@@ -5,7 +5,7 @@
         private $host = 'localhost';
         private $db_name = 'sj_project';
         private $user_name = 'root';
-        private $password = '';
+        private $password = ''; 
     
         protected $connection;
        

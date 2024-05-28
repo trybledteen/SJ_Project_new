@@ -18,6 +18,12 @@ include('partials/header.php');
         </section>
       <section class="container">
         <?php
+        /*$questions = array('Otázka 1' => 'Odpoveď 1',
+                       'Otázka 2' => 'Odpoveď 2',
+                       'Otázka 3' => 'Odpoveď 3',
+                       'Otázka 4' => 'Odpoveď 4',
+                      );
+          generate_questions($questions);*/
           
         $questions_object = new Question();
           $questions = $questions_object->select();
