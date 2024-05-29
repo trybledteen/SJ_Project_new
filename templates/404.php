@@ -1,5 +1,5 @@
 <?php
-include('partials/header.php');
+include('partials/header.php'); // Načíta hlavičku stránky
 ?> 
 <main>
       
@@ -14,5 +14,5 @@ include('partials/header.php');
     </main>
     
 <?php
-    include_once('partials/footer-login.php')
+    include_once('partials/footer-login.php') // Načíta pätičku stránky
 ?> 

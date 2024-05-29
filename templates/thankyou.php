@@ -1,12 +1,14 @@
 <?php
-include_once('partials/header.php');
+include_once('partials/header.php'); // Načíta hlavičku stránky
 ?>    
 
     <main>
     <?php
           $headings = array("I love peaks as individuals, as equal parts of a larger whole.", "I'm not going to conquer the mountains - they are as much a part of the world as people. Im conquering myself.");
-          $img_folder = '../assets/img/carousel/';
-          generate_slides($headings, $img_folder);
+          // Pole s nadpismi pre jednotlivé snímky
+          
+          $img_folder = '../assets/img/carousel/'; // Adresár, kde sa nachádzajú obrázky pre posuvník
+          generate_slides($headings, $img_folder); // Volanie funkcie na generovanie posuvníka s obrázkami
         ?>
         
         <section class="container cont">
@@ -26,9 +28,13 @@ include_once('partials/header.php');
         //print_r($_POST);
         //$conn = db_connection();
         $contact_object = new Contact();
+        // Vytvorenie nového objektu triedy Contact
+
         $contact_object->insert();
+        // Volanie metódy insert() na vloženie údajov z formulára do databázy
+
         ?>  
     </main>
     <?php
-    include_once('partials/footer.php')
+    include_once('partials/footer.php') // Načíta pätičku stránky
   ?> 

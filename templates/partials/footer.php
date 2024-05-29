@@ -13,7 +13,10 @@
            'Gallery'=>'gallery.php',
            'Contacts'=>'contacts.php'  
            );
+           // Vytvorenie objektu triedy Menu s definovanými stránkami
            $menu_object = new Menu($pages);
+
+           // Vygenerovanie navigačného menu pomocou metódy generate_menu()
            echo($menu_object->generate_menu());
         ?>
       </div>
@@ -23,7 +26,13 @@
 </footer>
 <?php
       $page_name = basename($_SERVER["SCRIPT_NAME"],'.php');
+      // Získanie názvu aktuálnej stránky pomocou funkcie basename(), odstránenie prípony .php a uloženie do premennej $page_name
+
       $page_object = new Page($page_name);
+      // Vytvorenie nového objektu triedy Page s názvom aktuálnej stránky
+
       $page_object->add_scripts();
+      // Volanie metódy add_scripts() z objektu triedy Page na pridanie skriptov pre aktuálnu stránku
+      
     ?>
 </html>

@@ -1,12 +1,19 @@
 <?php
-    include('partials/header.php');
+    include('partials/header.php'); // Načíta hlavičku stránky
+    
     // Vytvorenie objektu triedy User
     $user_object = new User();
 
     // Spracovanie údajov z formulára po odoslaní
     if(isset($_POST['user_register'])){
+        // Kontroluje, či bol formulár pre registráciu odoslaný
+
         $email = $_POST['email'];
+        // Získava email z formulára
+
         $password = $_POST['password'];
+        // Získava heslo z formulára
+
         $confirm_password = $_POST['confirm_password'];
         // Kontrola, či sa zadané heslá zhodujú
         if($password === $confirm_password) {
@@ -50,5 +57,5 @@
     </main>
     
 <?php
-    include_once('partials/footer.php')
+    include_once('partials/footer.php') // Načíta pätičku stránky
 ?>

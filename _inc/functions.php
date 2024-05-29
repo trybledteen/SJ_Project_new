@@ -1,5 +1,6 @@
 <?php 
 require('config.php');
+ // Načíta súbor config.php, ktorý obsahuje nastavenia alebo konfigurácie aplikácie
 
 function add_stylesheet() {
     echo '<link rel="stylesheet" href="../assets/css/style.css">';
@@ -86,14 +87,26 @@ function generate_gallery(int $n_rows, int $n_cols){
 }
 function generate_questions(array $questions){
     foreach($questions as $question => $answer){
+        // Prechádza všetky otázky a odpovede v poli
+
         echo('<div class="accordion">');
+        // Začiatok accordion bloku
+
         echo('<div class="question">'.$question.'</div>');
+        // Vytvorenie elementu pre otázku
+
         echo('<div class="answer">'.$answer.'</div>');
+        // Vytvorenie elementu pre odpoveď
+
         echo('</div>');
+        // Koniec accordion bloku
     }
 }
 function redirect_homepage(){
     header("Location: templates/home.php");
+    // Nastavuje presmerovanie na domovskú stránku
+
     die("Unable to find Home page");
+    // Ak by presmerovanie zlyhalo, zastaví vykonávanie skriptu a vypíše chybové hlásenie
 }
 ?>
